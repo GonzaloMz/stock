@@ -1,0 +1,16 @@
+h2 #{operacion}
+form#formularioAltaDeProductos(name='altaDeProducto')
+	| Codigo: 
+	input(name='codigo', type='text', value="#{codigo}", required)
+	| Color: 
+	input(name='descripcion[color]', value="#{descripcion.color}", type='text')
+	| Tipo: 
+	input(name='descripcion[tipo]', type='text', value="#{descripcion.tipo}")
+	| Precio:
+	| Lista:
+	input(name='precio[lista], type='number', value="#{precio.lista}")
+	| Descuento:
+	input(name='precio[porcentajeDescuento]', type='number', value="#{precio.porcentajeDescuento}")
+	| Precio con descuento
+	br
+	input(type='submit', value='Guardar', formaction="/modificacionDeProducto/#{_id}", formmethod='post')

@@ -1,0 +1,10 @@
+h2=operacion
+form#formularioAltaDeProductos(name='altaDeProducto')
+	| Codigo: 
+	input(name='codigo', type='text', required)
+	| Color: 
+	input(name='descripcion[color]', type='text')
+	| Tipo: 
+	input(name='descripcion[tipo]', type='text')
+	br
+	input(type='submit', value='Guardar', formaction="/altaDeProducto", formmethod='post')
